@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       .first{
+           width: 390px;
+           height: 50px;
+           background-color: orange;
+           margin: 100px auto;
+           box-sizing: border-box;
+       }
+       .first>li{
+           list-style: none;
+           float: left;
+           line-height: 50px;
+           text-align: center;
+           width: 130px;
+
+           box-sizing: border-box;
+       }
+        .nav1 li{
+            list-style: none;
+
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            transform: rotateY(180deg);
+            opacity: 0;
+            transition: all 0.8s;
+        }
+        .first>li:nth-child(1):hover .nav1 li{
+            transform: none;
+            opacity: 1;
+        }
+        .first>li:nth-child(1):hover .nav1 li:nth-child(1){
+            transition-delay: 0ms;
+        }
+        .first>li:nth-child(1):hover .nav1 li:nth-child(2){
+            transition-delay: 100ms;
+        }
+        .first>li:nth-child(1):hover .nav1 li:nth-child(3){
+            transition-delay: 200ms;
+        }
+        .first>li:nth-child(1):hover .nav1 li:nth-child(4){
+            transition-delay: 300ms;
+        }
+        .first>li:nth-child(1):hover .nav1 li:nth-child(5){
+            transition-delay: 400ms;
+        }
+        .first>li:nth-child(1) .nav1 li:nth-child(1){
+            transition-delay: 400ms;
+        }
+        .first>li:nth-child(1) .nav1 li:nth-child(2){
+            transition-delay: 300ms;
+        }
+        .first>li:nth-child(1) .nav1 li:nth-child(3){
+            transition-delay: 200ms;
+        }
+        .first>li:nth-child(1) .nav1 li:nth-child(4){
+            transition-delay: 100ms;
+        }
+        .first>li:nth-child(1) .nav1 li:nth-child(5){
+            transition-delay: 0s;
+        }
+        /*注意，nth-of-child前面必须加li标签，不加li标签，就不知道你选中的是那种类型的，li:nth-of-child(n)表示选中了*/
+    </style>
+</head>
+<body>
+<ul class="first">
+    <li>一级标题
+        <ul class="nav1">
+            <li>二级标题</li>
+            <li>二级标题</li>
+            <li>二级标题</li>
+            <li>二级标题</li>
+            <li>二级标题</li>
+        </ul>
+    </li>
+    <li >一级标题
+    </li>
+    <li>一级标题
+    </li>
+</ul>
+</body>
+</html>
